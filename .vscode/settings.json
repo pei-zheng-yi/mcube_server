@@ -4,20 +4,11 @@
   "editor.formatOnType": true,
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+    "source.fixAll": true
   },
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.enabled": false,
-  "cSpell.words": [
-    "aliyun",
-    "appleboy",
-    "middlewares",
-    "nestjs",
-    "MCube",
-    "prebuild",
-    "surmon",
-    "typegoose"
-  ]
+  "cSpell.words": ["aliyun", "appleboy", "middlewares", "nestjs", "MCube", "prebuild", "surmon", "typegoose"]
 }
