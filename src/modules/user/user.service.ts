@@ -23,7 +23,7 @@ export class UserService {
     return 'This action adds a new user';
   }
 
-  async find(userName) {
+  async findOneByName(userName) {
     return this.users.find((user) => user.userName === userName);
   }
 
@@ -32,7 +32,7 @@ export class UserService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} user`;
+    return this.users.find((user) => user.userId === id);
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
