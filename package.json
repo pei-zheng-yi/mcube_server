@@ -23,6 +23,8 @@
     "@nestjs/passport": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/throttler": "^3.1.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
     "express-rate-limit": "^6.7.0",
     "helmet": "^6.0.1",
     "lodash": "^4.17.21",
