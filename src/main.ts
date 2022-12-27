@@ -12,7 +12,7 @@ import { ValidationPipe } from './pipes/validation.pipe';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: {
-      origin: [/\*\.ultraverse\.top/],
+      origin: [/\.ultraverse\.top/],
     },
     logger: ['error', 'warn'],
   });
