@@ -7,9 +7,10 @@ import { AppService } from './app.service';
 import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { JwtAuthGuard } from './modules/auth/jwt-auth.guard';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
-  imports: [UserModule, AuthModule, ThrottlerModule.forRoot()],
+  imports: [TasksModule, UserModule, AuthModule, ThrottlerModule.forRoot()],
   controllers: [AppController],
   providers: [
     AppService,
