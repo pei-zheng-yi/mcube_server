@@ -3,15 +3,20 @@ import { CallHandler, ExecutionContext, HttpStatus, Injectable, NestInterceptor 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+export interface IResult {
+  data: any;
+  message: string | null;
+}
+
 export interface Response<T> {
   result: T;
 }
 
 @Injectable()
-export class TransformInterceptor<T> implements NestInterceptor<T, Response<T>> {
-  intercept(context: ExecutionContext, next: CallHandler<T>): Observable<Response<T>> {
+export class TransformInterceptor<T = IResult> implements NestInterceptor<IResult, Response<IResult>> {
+  intercept(context: ExecutionContext, next: CallHandler<IResult>): Observable<Response<IResult>> {
     return next.handle().pipe(
-      map((data) => {
+      map((result) => {
         const ctx = context.switchToHttp();
         // const response = ctx.getResponse();
         const request = ctx.getRequest();
@@ -20,10 +25,13 @@ export class TransformInterceptor<T> implements NestInterceptor<T, Response<T>> 
         const url = request.originalUrl;
         const method = request.method;
 
+        // data默认为上级返回值，即无message时，result作为data
+        const { data = result, message } = result;
+
         const res = {
           result: data,
           statusCode: HttpStatus.OK,
-          message: 'ok',
+          message: message || 'OK',
         };
 
         responseLogger.info(`${method} ${url}`, res);
