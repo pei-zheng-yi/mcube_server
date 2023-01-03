@@ -19,7 +19,7 @@ export class ValidationPipe implements PipeTransform {
       const errObj = {};
       errors.forEach((err) => {
         const { property, constraints } = err;
-        errObj[property] = Object.values(constraints);
+        errObj[property] = Object.values(constraints)[0];
       });
       throw new HttpException(
         { message: '请求参数校不合法！', error: isProdMode ? null : errObj },
