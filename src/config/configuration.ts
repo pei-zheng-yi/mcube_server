@@ -10,7 +10,6 @@ const devConfig = 'config.dev.yaml';
 const prodConfig = 'config.yaml';
 
 export default () => {
-  console.log(join(__dirname, devConfig));
   if (!existsSync(join(__dirname, devConfig)) && !existsSync(join(__dirname, prodConfig))) {
     throw new Error('缺少环境配置文件');
   }

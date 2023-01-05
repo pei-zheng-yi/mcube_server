@@ -5,6 +5,9 @@ db:
     userName: 'root',
     password: 'Peizhengyi8023',
     dbName: 'm_cube',
+    timezone: '+08:00',
+    charset: 'utf8mb4',
+    synchronize: false,
 
   redis:
     host: 'localhost',

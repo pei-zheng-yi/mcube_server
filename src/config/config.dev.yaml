@@ -1,26 +1,30 @@
 db:
   mysql:
-    host: '127.0.0.1',
-    port: 3306,
-    userName: 'root',
-    password: 'Peizhengyi8023',
-    dbName: 'm_cube',
+    host: '127.0.0.1'
+    port: 3306
+    userName: 'root'
+    password: 'Peizhengyi8023'
+    dbName: 'm_cube'
+    timezone: '+08:00'
+    charset: 'utf8mb4'
+    synchronize: true
+    logging: true
 
   redis:
-    host: 'localhost',
-    port: 6379,
-    password: null,
-    ttl: null,
-    defaultCacheTTL: 60 * 60 * 24,
+    host: 'localhost'
+    port: 6379
+    password: null
+    ttl: null
+    defaultCacheTTL: 60 * 60 * 24
 
 email:
-  account: '1195077416@qq.com',
-  password: 'zzbwdcckjbrfbaci',
-  from: '"MCube" <sir.peizhengyi@qq.com>',
-  admin: 'sir.peizhengyi@qq.com',
+  account: '1195077416@qq.com'
+  password: 'zzbwdcckjbrfbaci'
+  from: '"MCube" <sir.peizhengyi@qq.com>'
+  admin: 'sir.peizhengyi@qq.com'
 
 COS:
   # 腾讯
   Tencent:
-    SecretId: 'AKID67Gl110rBOM7fEHmpfdiWP8MO9nArMEv',
-    SecretKey: 'f4DE0Yu0sVrxpRn3QWN0NqseASl12h52',
+    SecretId: 'AKID67Gl110rBOM7fEHmpfdiWP8MO9nArMEv'
+    SecretKey: 'f4DE0Yu0sVrxpRn3QWN0NqseASl12h52'
