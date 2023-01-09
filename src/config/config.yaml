@@ -3,7 +3,7 @@ db:
     host: '127.0.0.1'
     port: 3306
     userName: 'root'
-    password: 'Peizhengyi8023'
+    password: '123456'
     dbName: 'm_cube'
     timezone: '+08:00'
     charset: 'utf8mb4'
@@ -17,13 +17,13 @@ db:
     defaultCacheTTL: 60 * 60 * 24
 
 email:
-  account: '1195077416@qq.com'
-  password: 'zzbwdcckjbrfbaci'
-  from: '"MCube" <sir.peizhengyi@qq.com>'
-  admin: 'sir.peizhengyi@qq.com'
+  account: '123456@qq.com'
+  password: '123456'
+  from: '"MCube" <123456@qq.com>'
+  admin: '123456'
 
 COS:
   # 腾讯
   Tencent:
-    SecretId: 'AKID67Gl110rBOM7fEHmpfdiWP8MO9nArMEv'
-    SecretKey: 'f4DE0Yu0sVrxpRn3QWN0NqseASl12h52'
+    SecretId: '123456'
+    SecretKey: '123456'
