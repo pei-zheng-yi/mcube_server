@@ -20,7 +20,6 @@ export class AuthController {
   async getProfile(@Request() req) {
     const user = await this.userService.findOne(req.user.userId);
     if (!user) return null;
-    const { password, ...userInfo } = user;
-    return userInfo;
+    return user;
   }
 }

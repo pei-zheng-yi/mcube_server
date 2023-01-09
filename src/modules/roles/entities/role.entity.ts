@@ -1,6 +1,7 @@
 import { BaseRecord } from '@app/src/common/entities/baseRecord';
-import { IsNumber, IsString } from 'class-validator';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { IsString } from 'class-validator';
+import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { User } from '../../user/entities/user.entity';
 
 @Entity()
 export class Role extends BaseRecord {
@@ -23,6 +24,10 @@ export class Role extends BaseRecord {
 
   @Column({ type: 'text', nullable: true, comment: '备注信息' })
   remark: string;
+
+  @ManyToMany(() => User, (user) => user.roles, { cascade: true })
+  @JoinTable()
+  user: User[];
 }
 
 export enum RoleStatus {

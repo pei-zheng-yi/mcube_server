@@ -10,6 +10,7 @@ import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { TasksModule } from './tasks/tasks.module';
+import { RolesModule } from './modules/roles/roles.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -41,6 +42,7 @@ import configuration from './config/configuration';
     UserModule,
     AuthModule,
     ThrottlerModule.forRoot(),
+    RolesModule,
   ],
   controllers: [AppController],
   providers: [

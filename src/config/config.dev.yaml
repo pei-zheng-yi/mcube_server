@@ -8,7 +8,7 @@ db:
     timezone: '+08:00'
     charset: 'utf8mb4'
     synchronize: true
-    logging: true
+    logging: ['error']
 
   redis:
     host: 'localhost'
